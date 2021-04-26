@@ -8,7 +8,7 @@
 import Foundation
 
 
-//Synopsis WebService Model
+//MARK:- Synopsis WebService Model
 
 struct SynopsisMovieDetails : Decodable {
     var genres: [Genres]
@@ -46,7 +46,7 @@ struct Genres: Decodable{
     var name:String
 }
 
-//Reviews Webservice Model
+//MARK:- Reviews Webservice Model
 struct AllReviewsList : Decodable {
     var  results: [ReviewList]
     init(){
@@ -70,7 +70,7 @@ struct AuthorDetail: Decodable{
     var rating:Int?
 }
 
-//Credits Webservice Model
+//MARK:- Credits Webservice Model
 
 struct MovieCreditsList: Decodable{
     var cast:[CastList]
@@ -118,7 +118,7 @@ struct CrewList:Decodable{
     }
 }
 
-//Similar Movies WebService Model
+//MARK:- Similar Movies WebService Model
 struct SimilarMovieItemList : Decodable {
     var  results: [SimilarMovieList]
     init(){

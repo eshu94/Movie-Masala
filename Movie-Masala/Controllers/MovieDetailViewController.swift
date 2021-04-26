@@ -32,9 +32,7 @@ class MovieDetailViewController: UIViewController{
             fatalError("Id not found")
         }
         self.movieDetailVM.getMovieDetail(movieId: movieId)
-        print("viewDidLoad")
-       //  self.loadMovieData()
-
+      
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,7 +82,7 @@ class MovieDetailViewController: UIViewController{
         
     }
     
-    //Segue Operations
+    //MARK:-Segue Operations
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CastCrewVCSegue"{
             
@@ -101,11 +99,12 @@ class MovieDetailViewController: UIViewController{
         }
     }
 }
+
+//MARK:- Tableviews functions
 extension MovieDetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.movieDetailVM.movieReviewList.results.count
-        //return 1
     }
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

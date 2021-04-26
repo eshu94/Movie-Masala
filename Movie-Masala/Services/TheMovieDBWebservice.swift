@@ -23,7 +23,7 @@ class TheMovieDBWebservice {
         self.apiKey = self.nsDictionary["API_KEY"] as? String ?? "api_key"
     }
     
-    //Function to get All movies for Movie List Screen
+    // MARK:- Function to get All movies for Movie List Screen
     func getAllMovies(completion: @escaping (([MovieList]?) -> Void)) {
 
         guard let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=\(self.apiKey)") else {
@@ -43,7 +43,6 @@ class TheMovieDBWebservice {
         
             DispatchQueue.main.async {
                 if let movieItemsList = movieItemsList {
-                 //   print(movieItemsList.results)
                     completion(movieItemsList.results)
                 }
             }
@@ -52,10 +51,9 @@ class TheMovieDBWebservice {
         
     }
     
-    //func to get synopis webservice
+    // MARK:- Function to get synopis webservice
     
     func getSysnopsisDetails(movieId:Int, completion: @escaping ((SynopsisMovieDetails?) -> Void)) {
-    //func getSysnopsisDetails(movieId:Int) {
         print("getSysnopsisDetails: Start")
         guard let url = URL(string: "https://api.themoviedb.org/3/movie/\(movieId)?api_key=\(self.apiKey)") else {
                    fatalError("URL is not correct")
@@ -77,7 +75,7 @@ class TheMovieDBWebservice {
         
     }
     
-    //func to get reviews webservice
+    //MARK:- Func to get reviews webservice
     
      func getReviewDetails(movieId:Int, completion: @escaping (([ReviewList]?) -> Void)) {
         print("getReviewDetails: Start")
@@ -104,7 +102,7 @@ class TheMovieDBWebservice {
      }
     
     
-    //func to get credits webservice
+    //MARK:- Func to get credits webservice
     
      func getCreditDetails(movieId:Int, completion: @escaping ((MovieCreditsList?) -> Void)) {
         print("getCreditDetails: Start")
@@ -117,22 +115,18 @@ class TheMovieDBWebservice {
              guard let data = data, error == nil else {
                  return
              }
-            
-           // print(data.debugDescription)
-            
              let movieCreditDetails = try? JSONDecoder().decode(MovieCreditsList.self, from: data)
             
  
             if let movieCreditDetails = movieCreditDetails {
                print(movieCreditDetails.cast)
-             //  print(movieCreditDetails.crew)
                 completion(movieCreditDetails)
             }
          }.resume()
          
      }
     
-    //func to get similar movies webservice
+    //MARK:- Func to get similar movies webservice
     
     func getSimiliarMoviesDetails(movieId:Int, completion: @escaping (([SimilarMovieList]?) -> Void)) {
         print("getSimiliarMoviesDetails: Start")

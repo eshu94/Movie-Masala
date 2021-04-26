@@ -23,7 +23,7 @@ class MovieDetailViewModel{
         self.getSimilarMovies(movieId: movieId)
     }
 
-    //Function to get Synopsis
+    //MARK:- Function to get Synopsis
     func getSynopsis(movieId:Int) {
         TheMovieDBWebservice().getSysnopsisDetails(movieId: movieId) { synopsisMovieItem in
             if let synopsisMovieItem = synopsisMovieItem {
@@ -39,7 +39,7 @@ class MovieDetailViewModel{
       
     }
     
-    //Function to get Reviews
+    //MARK:- Function to get Reviews
     func getReviews(movieId:Int) {
         TheMovieDBWebservice().getReviewDetails(movieId: movieId) { moviereviewList in
             if let moviereviewList = moviereviewList {
@@ -48,7 +48,7 @@ class MovieDetailViewModel{
         }
     }
     
-    //Function to get Credits
+    //MARK:- Function to get Credits
     func getCredits(movieId:Int) {
         TheMovieDBWebservice().getCreditDetails(movieId: movieId) { movieCreditItemList in
             if let movieCreditItemList = movieCreditItemList {
@@ -58,7 +58,7 @@ class MovieDetailViewModel{
       
     }
     
-    //Function to get Similar
+    //MARK:- Function to get Similar
     func getSimilarMovies(movieId:Int) {
         TheMovieDBWebservice().getSimiliarMoviesDetails(movieId: movieId) { similarMovieItemList in
             if let similarMovieItemList = similarMovieItemList {

@@ -44,7 +44,6 @@ class MovieListViewModel{
         self.movieLanguage = ""
         self.movieOverview = ""
         self.movieImgPath = ""
-        //self.movieList =
     }
     
      func fetchAllMovies(){

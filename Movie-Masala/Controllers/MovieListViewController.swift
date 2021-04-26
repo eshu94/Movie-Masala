@@ -38,7 +38,6 @@ class MovieListViewController: UIViewController {
             self.movieLogoImageView.layer.transform = CATransform3DConcat(self.movieLogoImageView.layer.transform, xRotaion)
         }){ (success) in
             self.loadData()
-           
         }
         
     }
@@ -47,7 +46,6 @@ class MovieListViewController: UIViewController {
         DispatchQueue.main.async {
             self.movieTableView.reloadData()
         }
-        print("loadData")
     }
     
     @IBAction func searchViewPressed(_ sender: Any) {
@@ -76,7 +74,7 @@ class MovieListViewController: UIViewController {
     }
     
 }
-
+//MARK:- Tableviews functions
 extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -68,6 +68,7 @@ class MovieSearchViewController: UIViewController {
     }
 }
 
+//MARK:- Tableviews functions
 extension MovieSearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

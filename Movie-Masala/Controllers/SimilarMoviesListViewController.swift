@@ -21,7 +21,7 @@ class SimilarMoviesListViewController: UIViewController {
        }
     
 }
-
+//MARK:- Collectionviews functions
 extension SimilarMoviesListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.similarMovieList.results.count

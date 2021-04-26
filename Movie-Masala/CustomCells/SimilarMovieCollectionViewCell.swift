@@ -20,6 +20,8 @@ class SimilarMovieCollectionViewCell : UICollectionViewCell {
     
     @IBOutlet weak var similarMoviePosterImageView: UIImageView!
     
+    
+    //MARK:- Function to populate similar movie cells
     func populateSimilarMovieData(similiarMovieList:SimilarMovieList){
         self.similiarMovieCellView.addShadowAndRoundedCornerForCollectionCells()
         self.similarMovieNameLabel.text = similiarMovieList.title
