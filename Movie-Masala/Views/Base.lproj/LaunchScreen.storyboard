@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jct-FU-jdL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AL6-AZ-1zl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -41,32 +41,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="962.31884057971024" y="375"/>
+            <point key="canvasLocation" x="1872.4637681159422" y="375"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="MhT-6H-elr">
+        <scene sceneID="f5R-gd-nhe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jct-FU-jdL" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AL6-AZ-1zl" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="79H-9G-2Qi">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dJ3-xv-mNw">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="Tint"/>
+                        <color key="tintColor" name="Cell"/>
+                        <color key="barTintColor" name="Cell"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="01J-lp-oVM" kind="relationship" relationship="rootViewController" id="ogK-dh-Hct"/>
+                        <segue destination="01J-lp-oVM" kind="relationship" relationship="rootViewController" id="h1J-Kw-iuU"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XWj-lY-PYR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fga-dA-GKG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="962.31884057971024" y="375"/>
         </scene>
     </scenes>
     <resources>
         <image name="TMBDLogo" width="185.03999328613281" height="133.39999389648438"/>
-        <namedColor name="Tint">
-            <color red="0.31372549019607843" green="0.18431372549019609" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Cell">
+            <color red="0.40000000000000002" green="0.51764705882352946" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

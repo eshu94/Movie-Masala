@@ -25,6 +25,7 @@
 		6F15AD59263488E700F95E08 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F15AD58263488E700F95E08 /* MovieDetailViewModel.swift */; };
 		6F15AD5D2634890600F95E08 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F15AD5C2634890600F95E08 /* MovieDetailViewController.swift */; };
 		6F15AD6226349A7F00F95E08 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F15AD6126349A7F00F95E08 /* HelperFunctions.swift */; };
+		6F856A192636F58C00EBAA39 /* SimilarMovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F856A182636F58C00EBAA39 /* SimilarMovieCollectionViewCell.swift */; };
 		6FC5FEC22635B77D00F4D5B3 /* MovieSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5FEC12635B77C00F4D5B3 /* MovieSearchViewController.swift */; };
 		6FC5FEC52635D68500F4D5B3 /* MovieReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5FEC42635D68500F4D5B3 /* MovieReviewTableViewCell.swift */; };
 		6FC5FEC82636761800F4D5B3 /* CastCrewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC5FEC72636761800F4D5B3 /* CastCrewListViewController.swift */; };
@@ -55,6 +56,7 @@
 		6F15AD58263488E700F95E08 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		6F15AD5C2634890600F95E08 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		6F15AD6126349A7F00F95E08 /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		6F856A182636F58C00EBAA39 /* SimilarMovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarMovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		6FC5FEC12635B77C00F4D5B3 /* MovieSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchViewController.swift; sourceTree = "<group>"; };
 		6FC5FEC42635D68500F4D5B3 /* MovieReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieReviewTableViewCell.swift; sourceTree = "<group>"; };
 		6FC5FEC72636761800F4D5B3 /* CastCrewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastCrewListViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				6FC5FEC42635D68500F4D5B3 /* MovieReviewTableViewCell.swift */,
 				6FC5FECD263683E800F4D5B3 /* CastCrewListTableViewCell.swift */,
 				6FC5FED02636C77F00F4D5B3 /* SearchMovieListTableViewCell.swift */,
+				6F856A182636F58C00EBAA39 /* SimilarMovieCollectionViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				6F15AD092632DE2C00F95E08 /* AppDelegate.swift in Sources */,
 				6F15AD6226349A7F00F95E08 /* HelperFunctions.swift in Sources */,
 				6FC5FEC22635B77D00F4D5B3 /* MovieSearchViewController.swift in Sources */,
+				6F856A192636F58C00EBAA39 /* SimilarMovieCollectionViewCell.swift in Sources */,
 				6F15AD0B2632DE2C00F95E08 /* SceneDelegate.swift in Sources */,
 				6F15AD4026330DDF00F95E08 /* TheMovieDBWebservice.swift in Sources */,
 				6F15AD59263488E700F95E08 /* MovieDetailViewModel.swift in Sources */,

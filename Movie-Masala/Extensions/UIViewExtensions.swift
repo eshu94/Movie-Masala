@@ -24,4 +24,11 @@ extension UIView {
         layer.cornerRadius = 20
     }
     
+    func addShadowAndRoundedCornerForCollectionCells(){
+        layer.shadowOpacity = 5
+        layer.shadowOffset = CGSize.zero
+        layer.shadowColor = UIColor.black.cgColor
+        layer.cornerRadius = 20
+    }
+    
 }

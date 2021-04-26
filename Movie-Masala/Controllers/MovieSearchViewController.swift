@@ -91,7 +91,7 @@ extension MovieSearchViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        (view as! UITableViewHeaderFooterView).contentView.backgroundColor = UIColor.systemGray3.withAlphaComponent(1.0)
+        (view as! UITableViewHeaderFooterView).contentView.backgroundColor = Theme.backGround?.withAlphaComponent(1.0)
         (view as! UITableViewHeaderFooterView).textLabel?.textColor = UIColor.black
         (view as! UITableViewHeaderFooterView).textLabel?.font = UIFont(name: Theme.labelFontNameBold, size:22)
     }

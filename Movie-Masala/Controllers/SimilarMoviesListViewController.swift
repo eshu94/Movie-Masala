@@ -10,12 +10,28 @@ import UIKit
 
 class SimilarMoviesListViewController: UIViewController {
     var similarMovieList: SimilarMovieItemList!
+    @IBOutlet weak var similarMoviesCollectionView: UICollectionView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.similarMoviesCollectionView.delegate = self
+        self.similarMoviesCollectionView.dataSource = self
         print("Similar MovieList ViewController")
-        // print(self.similarMovieList ?? <#default value#>)
        }
+    
+}
+
+extension SimilarMoviesListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.similarMovieList.results.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = self.similarMoviesCollectionView.dequeueReusableCell(withReuseIdentifier: "ccell", for: indexPath) as! SimilarMovieCollectionViewCell
+        cell.populateSimilarMovieData(similiarMovieList: self.similarMovieList.results[indexPath.row])
+        return cell
+    }
+    
     
 }
