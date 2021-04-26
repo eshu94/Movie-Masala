@@ -7,10 +7,12 @@
 
 import Foundation
 import UIKit
-//Function for date conversion
+import CoreData
+
 
 struct HelperFunctions {
     
+    //Function for date conversion
     func convertdteFormat(inputDate: String) -> String {
 
          let olDateFormatter = DateFormatter()
@@ -93,16 +95,47 @@ struct HelperFunctions {
     
     //Function to save searched movieList
     func saveSearchMovie(searchedMovieList: [String]){
-        let defaults = UserDefaults.standard
-        if (searchedMovieList.count > 0 && searchedMovieList.count == 5){
-            defaults.setValue(searchedMovieList, forKey: "searchedMovie")
-        }/*else if(searchedMovieList.count > 5 ){
-            var movieList:[String] = []
-            for item in 0...5 {
-                movieList[item] = searchedMovieList[item]
+        
+        let recentMovieTitle = searchedMovieList.enumerated().filter {  $0.offset < 5 }.map { $0.element }
+        print(recentMovieTitle)
+        clearData()
+        
+        guard let data = try? JSONEncoder().encode(recentMovieTitle),
+           let movieEncodedString = String(data: data, encoding: .utf8) else { return }
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+          return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "SaveMovieTitle", in: managedContext)!
+        let movie = NSManagedObject(entity: entity, insertInto: managedContext)
+        movie.setValue(movieEncodedString, forKey: "title")
+        
+        do {
+          try managedContext.save()
+        } catch let error as NSError {
+          print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
+    func clearData(){
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+          return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SaveMovieTitle")
+        fetchRequest.returnsObjectsAsFaults = false
+        do {
+            let movieObj = try managedContext.fetch(fetchRequest)
+            for titleObj in movieObj as! [NSManagedObject] {
+                managedContext.delete(titleObj)
             }
-            defaults.setValue(movieList, forKey: "searchdMovie")*/
-        //}
+           try managedContext.save()
+            } catch let error as NSError {
+                print("Could not delete. \(error), \(error.userInfo)")
+              }
     }
 
 }

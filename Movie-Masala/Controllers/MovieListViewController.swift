@@ -51,6 +51,7 @@ class MovieListViewController: UIViewController {
     }
     
     @IBAction func searchViewPressed(_ sender: Any) {
+        self.movieTitleList = []
         for movieResult in self.movieListVM.movieList.results {
             self.movieTitleList.append(movieResult.title)
             

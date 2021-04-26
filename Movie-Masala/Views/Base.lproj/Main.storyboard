@@ -176,7 +176,7 @@
             <objects>
                 <viewController id="1ie-IX-wrj" customClass="MovieSearchViewController" customModule="Movie_Masala" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" alpha="0.94999999999999996" contentMode="scaleToFill" id="sdT-Qd-YtT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="iVc-3Z-hCx">
@@ -211,7 +211,7 @@
                             </stackView>
                             <tableView clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K31-pU-wFA">
                                 <rect key="frame" x="30" y="113" width="354" height="645"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recentlySearchedIdentifier" rowHeight="50" id="kgx-z9-vbe" customClass="SearchMovieListTableViewCell" customModule="Movie_Masala" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="354" height="50"/>
@@ -230,7 +230,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <color key="backgroundColor" systemColor="systemGray3Color"/>
                                                     <constraints>
                                                         <constraint firstItem="5FJ-76-MlW" firstAttribute="leading" secondItem="a1Q-ZT-QMH" secondAttribute="leading" constant="12" id="WsL-9I-fyj"/>
                                                         <constraint firstItem="5FJ-76-MlW" firstAttribute="top" secondItem="a1Q-ZT-QMH" secondAttribute="top" id="nhV-Gr-P7o"/>
@@ -245,7 +245,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="a1Q-ZT-QMH" secondAttribute="trailing" constant="10" id="oN8-o5-17T"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
                                         <connections>
                                             <outlet property="movieTitleLabel" destination="5FJ-76-MlW" id="cBT-BH-PkI"/>
                                             <outlet property="searchedMovieViewCell" destination="a1Q-ZT-QMH" id="Wny-AQ-jVs"/>
@@ -280,7 +280,7 @@
             <objects>
                 <viewController storyboardIdentifier="MovieDetailVCID" id="Aj4-jN-763" customClass="MovieDetailViewController" customModule="Movie_Masala" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2ds-zW-6Qi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RnH-0b-xUg">
@@ -490,7 +490,7 @@
             <objects>
                 <viewController id="xLZ-qt-wBl" customClass="CastCrewListViewController" customModule="Movie_Masala" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" alpha="0.94999999999999996" contentMode="scaleToFill" id="H0J-Iu-3zO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="50" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YbZ-vZ-atN">
@@ -681,7 +681,7 @@
             <objects>
                 <viewController id="phO-jF-nJi" customClass="SimilarMoviesListViewController" customModule="Movie_Masala" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qfB-Xu-IoI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="nRO-Ne-LhP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

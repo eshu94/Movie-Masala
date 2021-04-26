@@ -7,10 +7,11 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class MovieSearchViewController: UIViewController {
+    var movies: [NSManagedObject] = []
     var movieList:[String]?
-    let defaults = UserDefaults.standard
     var searchedMovieList:[String]=[]
     
     @IBOutlet weak var searchedInputTextField:UITextField!
@@ -28,10 +29,24 @@ class MovieSearchViewController: UIViewController {
     func refreshData(){
         print("refreshData")
         
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+          return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "SaveMovieTitle")
+        
         DispatchQueue.main.async {
-            if(self.defaults.array(forKey: "searchedMovie") != nil) {
-                self.searchedMovieList = (self.defaults.array(forKey: "searchedMovie") as? [String] ?? [])
-                print(self.searchedMovieList)
+            do {
+                self.movies = try managedContext.fetch(fetchRequest)
+                for i in self.movies{
+                    if let decodedMovieString = i.value(forKey: "title") as? String {
+                        let data = Data(decodedMovieString.utf8)
+                        self.searchedMovieList = try! JSONDecoder().decode([String].self, from: data)
+                        print("Recently Searched: ", self.searchedMovieList )
+                    }
+                }
+            } catch let error as NSError {
+              print("Could not fetch. \(error), \(error.userInfo)")
             }
             self.searchedMovieListTV.reloadData()
         }
@@ -71,14 +86,14 @@ extension MovieSearchViewController: UITableViewDelegate, UITableViewDataSource 
             return "No Recent Searches"
             
         }else {
-            return "Recently Searched"
+            return "Recently Searched:"
         }
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        (view as! UITableViewHeaderFooterView).contentView.backgroundColor = UIColor.systemGray6.withAlphaComponent(1.0)
+        (view as! UITableViewHeaderFooterView).contentView.backgroundColor = UIColor.systemGray3.withAlphaComponent(1.0)
         (view as! UITableViewHeaderFooterView).textLabel?.textColor = UIColor.black
-        (view as! UITableViewHeaderFooterView).textLabel?.font = UIFont(name: Theme.labelFontNameBold, size:25)
+        (view as! UITableViewHeaderFooterView).textLabel?.font = UIFont(name: Theme.labelFontNameBold, size:22)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
